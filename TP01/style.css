@@ -17,6 +17,7 @@ body
 	background-color: rgba(235, 47, 6,0.35);
 }
 .bgimg{
+	margin: 20px;
 	background: url("calais_petit.jpg");
 	height: 350px;
 	background-position: center;
@@ -27,9 +28,8 @@ body
 }
 
 form{
+	margin: auto;
 	padding: 10px;
-	margin-left: 20px;
-	margin-top: 20px;
 	border: 1px solid #aaaaaa;
 	width: 250px;
 	height: 400px;

@@ -1,0 +1,83 @@
+/*vw : « Viewport Width », correspond à l’unité relative à la largeur de votre écran
+vh : « Viewport Height », correspond à l’unité relative à la hauteur de votre écran
+*/
+body
+{
+	font-family: 'Century Gothic', Calibri, serif; 
+	font-size: 16px;
+	margin: 0px;
+	padding: 0px;
+	color: rgba(26,26,26,.75);
+}
+h1{
+	font-size: 2.4rem;
+}
+
+.p1{
+	background-color: rgba(74, 105, 189,0.35);
+}
+.p2{
+	background-color: rgba(189, 195, 199,0.15);
+}
+.p3{
+	background-color: rgba(235, 47, 6,0.35);
+}
+.bgimg{
+	margin: 20px;
+	background: url("calais_petit.jpg");
+	height: 350px;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	/*position: relative;
+	color: #fff;*/
+}
+
+form{
+	margin: auto;
+	padding: 10px;
+	border: 1px solid #aaaaaa;
+	width: 270px;
+	height: 400px;
+}
+.choix{
+	margin-bottom: 10px;
+	line-height: 25px;
+	margin-right: 20px;
+	width: 250px;
+}
+.sec{
+	margin: 0px 10%;
+}
+
+table {
+/*  border-collapse: collapse;*/
+  width: 100%;
+}
+
+td, th {
+  border: 2px solid #dddddd;
+  text-align: left;
+  padding: 6px;
+}
+th{
+  background-color: #dddddd;
+}
+
+footer{
+	height: 100px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-device-pixel-ratio: 3/2), 
+only screen and (min-device-pixel-ratio: 2){
+	.bgimg{
+		background: url("logo-iut.jpg");
+	}
+
+}
+/*and (max-width: 767px)
+	table{
+		display: inline-block;
+	}
+*/
