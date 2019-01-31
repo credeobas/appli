@@ -1,0 +1,118 @@
+/*vw : « Viewport Width », correspond à l’unité relative à la largeur de votre écran
+vh : « Viewport Height », correspond à l’unité relative à la hauteur de votre écran
+*/
+body{
+	font-family: 'Century Gothic', Calibri, serif; 
+	font-size: 16px;
+	top: 0;
+	left: 0;
+	margin: 0px;
+	padding: 0px;
+	color: rgba(26,26,26,.75);
+}
+h1{
+	font-size: 2.6rem;
+}
+h3{
+	font-size: 2.0rem;
+}
+a,li{
+	text-decoration: none;
+	list-style-type: none;
+}
+h3 a{
+	color: rgba(102,102,102,1);
+}
+/*nav, .logo, li, ul{
+	display: inline-block;
+}*/
+ul{
+	display: inline-block;
+}
+li, ul{
+	float: right;
+}
+.logo{
+	height: 150px;
+	background: url(minimalist1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.menu-nav{
+	display: inline-block;
+	overflow: hidden;
+	background-color: #ccc; 
+	width: 100%;
+}
+.menu-nav ul li a{
+	float: right;
+	color: #f2f2f2;
+	text-align: right;
+	padding: 14px 16px;
+	font-size: 17px;
+}
+.menu-nav a:hover {
+	border:  ;
+}
+
+
+.p1{
+	background-color: rgba(74, 105, 189,0.35);
+}
+.imgtemplate{
+	background: url(overlay.png);
+	margin: 20px;
+	height: 350px;
+	background-position: 100% 13%;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#section-1{
+	color: #252525;
+	font-size: 1.4rem;
+	text-align: justify;
+	letter-spacing: 1px;
+	line-height: 1;
+	margin-bottom: 48px;
+	padding: 0 10px;
+	position: relative;
+	margin: 0 20px;
+}
+.row{
+
+}
+.element{
+	text-align: center;
+	margin: 0 2vw;
+	width: 20%;
+	display: inline-block;
+}
+
+.icon{
+	height: 20rem;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.icon1{
+	background-image: url(minimalist1.jpg);
+}
+.icon2{
+	background-image: url(minimalist2.jpg);
+}
+.icon3{
+	background-image: url(minimalist3.jpg);
+}
+.icon4{
+	background-image: url(minimalist4.jpg);
+}
+
+
+footer {
+	border-top: 1px solid black;
+}
+footer p{
+	margin-right: 10vw; 
+	text-align: right;
+}
