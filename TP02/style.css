@@ -22,9 +22,14 @@ h1{
 .p3{
 	background-color: rgba(235, 47, 6,0.35);
 }
+.calaisimg{
+	background: url("calais_petit.jpg");
+}
+.biereimg{
+	background: url("biere.jpg");
+}
 .bgimg{
 	margin: 20px;
-	background: url("calais_petit.jpg");
 	height: 350px;
 	background-position: center;
 	background-size: contain;
@@ -74,10 +79,23 @@ only screen and (min-device-pixel-ratio: 2){
 	.bgimg{
 		background: url("logo-iut.jpg");
 	}
+}
+
+@media only screen and (max-width: 480px){
+	table{
+		margin-top: 5vh;
+	    border: 2px solid #dddddd;
+
+	}
+	td{			
+		display: block;	
+		border: inherit;
+	}
+	th{
+		display: block;
+	}
+	tr{
+		text-align: center;			
+	}
 
 }
-/*and (max-width: 767px)
-	table{
-		display: inline-block;
-	}
-*/
