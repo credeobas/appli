@@ -191,7 +191,7 @@ function update()
     requestAnimationFrame( update );//KEEP ANIMATING
 }
 
-("#logo").click(function() {
+$("#logo").click(function() {
 		init();
-	});
+});
 
