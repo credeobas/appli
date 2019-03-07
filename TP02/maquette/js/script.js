@@ -76,9 +76,10 @@ function deviceOrientationListener(event) {
 	var xValue = Math.round(event.gamma);
 	var yValue = Math.round(event.beta);
 	var Rotation = Math.round(event.alpha);
-	alert("valeur x "+xValue);
+/*	alert("valeur x "+xValue);
 	alert("valeur y "+yValue);
 	alert("valeur Rotation "+Rotation);
+*/
 	document.getElementById("#logo").style.transform = "rotate("+Rotation+")";
 /*
 	var c = document.getElementById("myCanvas");
