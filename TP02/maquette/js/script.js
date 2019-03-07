@@ -72,13 +72,12 @@ function Envoyer(formulaire) {
 		alert("maps n'est pas supporté par votre navigateur");
 	    //initMap(46.139023,-2.435386, 6);
 
+/*
 function deviceOrientationListener(event) {			
 	var xValue = Math.round(event.gamma);
 	var yValue = Math.round(event.beta);
 	var Rotation = Math.round(event.alpha);
-	alert(xValue);
 
-/*
 	var c = document.getElementById("myCanvas");
 	var ctx = c.getContext("2d");
 
@@ -101,15 +100,13 @@ function deviceOrientationListener(event) {
 	ctx.fillText("Gamma: " + Math.round(event.gamma), 10, 270);
 	ctx.beginPath();
 	ctx.fillRect(90, 340, 180, event.gamma);
-*/
 }
 if (window.DeviceOrientationEvent) {
 	window.addEventListener("deviceorientation", deviceOrientationListener);
 } else {
 	alert("Device Orientation n'est pas supporté");
 }
-
-
+*/
 
 
 
@@ -130,7 +127,6 @@ if ( !window.requestAnimationFrame ) {
         };
  
     } )();
- 
 }
 
 
@@ -153,8 +149,6 @@ function init()
 		window.addEventListener("deviceorientation", function(event){
 			logo.velocity.y = Math.round(event.beta);
 			logo.velocity.x = Math.round(event.gamma);
-			alert(logo.velocity.y);
-			alert(logo.velocity.x);
         }
     )}
     else {
