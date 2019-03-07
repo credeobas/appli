@@ -72,13 +72,15 @@ function Envoyer(formulaire) {
 		alert("maps n'est pas supporté par votre navigateur");
 	    //initMap(46.139023,-2.435386, 6);
 
-/*
 function deviceOrientationListener(event) {			
 	var xValue = Math.round(event.gamma);
 	var yValue = Math.round(event.beta);
 	var Rotation = Math.round(event.alpha);
 	alert("valeur x "+xValue);
-
+	alert("valeur y "+yValue);
+	alert("valeur Rotation "+Rotation);
+	document.getElementById("#logo").style.transform = "rotate("+Rotation+")";
+/*
 	var c = document.getElementById("myCanvas");
 	var ctx = c.getContext("2d");
 
@@ -106,88 +108,7 @@ if (window.DeviceOrientationEvent) {
 	window.addEventListener("deviceorientation", deviceOrientationListener);
 } else {
 	alert("Device Orientation n'est pas supporté");
-}
 */
-
-
-
-
-if ( !window.requestAnimationFrame ) {
- 
-    window.requestAnimationFrame = ( function() {
- 
-        return window.webkitRequestAnimationFrame ||
-        window.mozRequestAnimationFrame ||
-        window.oRequestAnimationFrame ||
-        window.msRequestAnimationFrame ||
-        function( /* function FrameRequestCallback */ callback, /* DOMElement Element */ element ) {
- 
-            window.setTimeout( callback, 1000 / 60 );
- 
-        };
- 
-    } )();
- 
 }
 
-
-
-var logo;
-var w;
-var h;
-
-function init()
-{
-    logo = document.getElementById("logo");
-	w = window.innerWidth;
-    h = window.innerHeight;
-    alert(w);
-	logo.style.left = (w/2)-50+"px";
-	logo.style.top = (h/2)-50+"px";
-	logo.velocity = {x:0,y:0}
-	logo.position = {x:0,y:0}
-    
-    if (window.DeviceOrientationEvent) {
-		window.addEventListener("deviceorientation", function(event){
-			logo.velocity.y = Math.round(event.beta);
-			logo.velocity.x = Math.round(event.gamma);
-        }
-    )}
-    else {
-	  	alert("Sorry, your browser doesn't support Device Orientation");
-	} ;
-	update();
-    
-}
-
-function update()
-{
-        logo.position.x += logo.velocity.x;
-        logo.position.y += logo.velocity.y;
-        
-        if(logo.position.x > (w-100) && logo.velocity.x > 0){
-		   logo.position.x = w-100;
-		}
-			
-		if(logo.position.x < 0 && logo.velocity.x < 0){
-			logo.position.x = 0;
-		}
-		
-		if(logo.position.y > (h-100) && logo.velocity.y > 0){
-		   logo.position.y = h-100;
-		}
-		
-		if(logo.position.y < 0 && logo.velocity.y < 0){
-		   logo.position.y = 0;
-		}
-    
-    logo.style.top = logo.position.y + "px"
-    logo.style.left = logo.position.x + "px"
-    
-    requestAnimationFrame( update );//KEEP ANIMATING
-}
-
-$("#logo").click(function() {
-		init();
-});
 
