@@ -181,7 +181,7 @@ function update()
 		   logo.position.y = h-100;
 		}
 		
-		if(logo.position.y < 0 && logo.velocity.y < 0)s{
+		if(logo.position.y < 0 && logo.velocity.y < 0){
 		   logo.position.y = 0;
 		}
     
