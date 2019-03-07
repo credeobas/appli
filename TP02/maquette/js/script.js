@@ -110,5 +110,5 @@ if (window.DeviceOrientationEvent) {
 } else {
 	alert("Device Orientation n'est pas supporté");
 }
-
+}
 
