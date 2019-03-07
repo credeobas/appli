@@ -105,10 +105,10 @@ function deviceOrientationListener(event) {
 	ctx.fillRect(90, 340, 180, event.gamma);
 }
 */
+}
 if (window.DeviceOrientationEvent) {
 	window.addEventListener("deviceorientation", deviceOrientationListener);
 } else {
 	alert("Device Orientation n'est pas supporté");
-}
 }
 
