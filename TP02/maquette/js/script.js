@@ -160,6 +160,7 @@ function init()
     else {
 	  	alert("Sorry, your browser doesn't support Device Orientation");
 	} ;
+	update();
     
 }
 
