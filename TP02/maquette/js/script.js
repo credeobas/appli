@@ -72,127 +72,22 @@ function Envoyer(formulaire) {
 		alert("maps n'est pas supporté par votre navigateur");
 	    //initMap(46.139023,-2.435386, 6);
 
-function deviceOrientationListener(event) {			
-	var xValue = Math.round(event.gamma);
-	var yValue = Math.round(event.beta);
-	var Rotation = Math.round(event.alpha);
-	alert(xValue);
 
-/*
-	var c = document.getElementById("myCanvas");
-	var ctx = c.getContext("2d");
-
-	ctx.clearRect(0, 0, c.width, c.height);
-	ctx.fillStyle = "#FF7777";
-	ctx.font = "14px Verdana";
-	ctx.fillText("Alpha: " + Math.Round(event.alpha), 10, 20);
-	ctx.beginPath();
-	ctx.moveTo(180, 75);
-	ctx.lineTo(210, 75);
-	ctx.arc(180, 75, 60, 0, event.alpha * Math.PI / 180);
-	ctx.fill();
-
-	ctx.fillStyle = "#FF6600";
-	ctx.fillText("Beta: " + Math.round(event.beta), 10, 140);
-	ctx.beginPath();
-	ctx.fillRect(180, 150, event.beta, 90);
-
-	ctx.fillStyle = "#FF0000";
-	ctx.fillText("Gamma: " + Math.round(event.gamma), 10, 270);
-	ctx.beginPath();
-	ctx.fillRect(90, 340, 180, event.gamma);
-*/
-}
-if (window.DeviceOrientationEvent) {
-	window.addEventListener("deviceorientation", deviceOrientationListener);
-} else {
-	alert("Device Orientation n'est pas supporté");
-}
-
-
-
-
-
-
-
-if ( !window.requestAnimationFrame ) {
- 
-    window.requestAnimationFrame = ( function() {
- 
-        return window.webkitRequestAnimationFrame ||
-        window.mozRequestAnimationFrame ||
-        window.oRequestAnimationFrame ||
-        window.msRequestAnimationFrame ||
-        function( /* function FrameRequestCallback */ callback, /* DOMElement Element */ element ) {
- 
-            window.setTimeout( callback, 1000 / 60 );
- 
-        };
- 
-    } )();
- 
-}
-
-
-
-var ball;
-var w;
-var h;
 
 function init()
 {
-    ball = document.getElementById("ball");
-	 w = window.innerWidth;
-     h = window.innerHeight;
-	
-	ball.style.left = (w/2)-50+"px";
-	ball.style.top = (h/2)-50+"px";
-	ball.velocity = {x:0,y:0}
-	ball.position = {x:0,y:0}
-    
-    if (window.DeviceOrientationEvent) {
+	if (window.DeviceOrientationEvent) {
 		
 		window.addEventListener("deviceorientation", function(event) 
 		{
-			ball.velocity.y = Math.round(event.beta);
-			ball.velocity.x = Math.round(event.gamma);
-        }
-                               )
-    }
-    else {
+			document.getElementById("y").style.webkitTransform = "scaleY("+(Math.round(event.beta))+")";  
+			document.getElementById("x").style.webkitTransform = "scaleX("+(Math.round(event.gamma))+")";
+			document.getElementById("angle").style.webkitTransform = "rotateZ("+(Math.round(event.alpha))+"deg)";  
+		}, true);
+		
+		
+		
+	} else {
   	alert("Sorry, your browser doesn't support Device Orientation");
-	} ;
-    
-    update();
-}
-
-function update()
-{
-        ball.position.x += ball.velocity.x;
-        ball.position.y += ball.velocity.y;
-        
-        if(ball.position.x > (w-100) && ball.velocity.x > 0)
-			{
-			   ball.position.x = w-100;
-			}
-			
-			if(ball.position.x < 0 && ball.velocity.x < 0)
-			{
-				ball.position.x = 0;
-			}
-			
-			if(ball.position.y > (h-100) && ball.velocity.y > 0)
-			{
-			   ball.position.y = h-100;
-			}
-			
-			if(ball.position.y < 0 && ball.velocity.y < 0)
-			{
-			   ball.position.y = 0;
-			}
-    
-    ball.style.top = ball.position.y + "px"
-        ball.style.left = ball.position.x + "px"
-    
-    requestAnimationFrame( update );//KEEP ANIMATING
+	} 
 }
