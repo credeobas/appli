@@ -80,7 +80,7 @@ function deviceOrientationListener(event) {
 	alert("valeur y "+yValue);
 	alert("valeur Rotation "+Rotation);
 */
-	document.getElementById("#logo").style.transform = "rotate("+Rotation+"deg)";
+	document.getElementById('logo').style.transform = "rotate("+Rotation+"deg)";
 /*
 	var c = document.getElementById("myCanvas");
 	var ctx = c.getContext("2d");
