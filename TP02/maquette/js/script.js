@@ -80,7 +80,7 @@ function deviceOrientationListener(event) {
 	alert("valeur y "+yValue);
 	alert("valeur Rotation "+Rotation);
 */
-	document.getElementById('logo').style.transform = "rotate("+Rotation+"deg) translate("+yValue+"px, "+xValue+"px)";
+	document.getElementById('logo').style.transform = "translate("+xValue+"px, "+yValue+"px) rotate("+Rotation+"deg) ";
 	//document.getElementById('logo').style.transform = "skew("+xValue+"deg, "+yValue+"deg)";
 	//document.getElementById('logo').style.transform = "skewX("+xValue+"deg)";
 	//document.getElementsByClassName('icon').style.transform = "rotate("+Rotation+"deg)";
