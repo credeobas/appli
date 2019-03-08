@@ -80,7 +80,10 @@ function deviceOrientationListener(event) {
 	alert("valeur y "+yValue);
 	alert("valeur Rotation "+Rotation);
 */
-	document.getElementById('logo').style.transform = "skew("+xValue+"px, "+yValue+"px)";
+	screenH = screen.height;
+	screenW = screen.width;
+
+	document.getElementById('logo').style.transform = "skew("+screenW-xValue+"px, "+screenH-yValue+"px)";
 	 //rotate("+Rotation+"deg) 
 	//document.getElementById('logo').style.transform = "skew("+xValue+"deg, "+yValue+"deg)";
 	//document.getElementById('logo').style.transform = "skewX("+xValue+"deg)";
