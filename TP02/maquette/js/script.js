@@ -81,7 +81,7 @@ function deviceOrientationListener(event) {
 	alert("valeur Rotation "+Rotation);
 */
 	//document.getElementById('logo').style.transform = "rotate("+Rotation+"deg)";
-	document.getElementsByClassName('gyroscope').style.transform = "rotate("+Rotation+"deg)";
+	document.getElementsByID('gyroscope').style.transform = "rotate("+Rotation+"deg)";
 
 /*
 	var c = document.getElementById("myCanvas");
