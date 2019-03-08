@@ -81,7 +81,9 @@ function deviceOrientationListener(event) {
 	alert("valeur Rotation "+Rotation);
 */
 	document.getElementById('logo').style.transform = "rotate("+Rotation+"deg)";
-	document.getElementsByClassName('icon').style.transform = "rotate("+Rotation+"deg)";
+	document.getElementById('logo').style.transform = "skewY("+yValue+"deg)";
+	document.getElementById('logo').style.transform = "skewX("+xValue+"deg)";
+	//document.getElementsByClassName('icon').style.transform = "rotate("+Rotation+"deg)";
 
 /*
 	var c = document.getElementById("myCanvas");
