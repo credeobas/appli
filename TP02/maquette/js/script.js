@@ -87,7 +87,7 @@ function deviceOrientationListener(event) {
 	 //rotate("+Rotation+"deg) 
 	//document.getElementById('logo').style.transform = "skew("+xValue+"deg, "+yValue+"deg)";
 	//document.getElementById('logo').style.transform = "skewX("+xValue+"deg)";
-	document.getElementsByClassName('logo').style.transform = "rotate("+Rotation+"deg)";
+	document.getElementsById('logo').style.transform = "rotate("+Rotation+"deg)";
 
 /*
 	var c = document.getElementById("myCanvas");
