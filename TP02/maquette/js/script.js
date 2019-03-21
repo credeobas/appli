@@ -83,11 +83,11 @@ function deviceOrientationListener(event) {
 	screenH = screen.height;
 	screenW = screen.width;
 
-	document.getElementById('logo').style.transform = "skew("+screenW-xValue+"px, "+screenH-yValue+"px)";
+	//document.getElementById('logo').style.transform = "skew("+xValue+"px, "+yValue+"px)";
 	 //rotate("+Rotation+"deg) 
 	//document.getElementById('logo').style.transform = "skew("+xValue+"deg, "+yValue+"deg)";
 	//document.getElementById('logo').style.transform = "skewX("+xValue+"deg)";
-	//document.getElementsByClassName('icon').style.transform = "rotate("+Rotation+"deg)";
+	document.getElementsByClassName('logo').style.transform = "rotate("+Rotation+"deg)";
 
 /*
 	var c = document.getElementById("myCanvas");
