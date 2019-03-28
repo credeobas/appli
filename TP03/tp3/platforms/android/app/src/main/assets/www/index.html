@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Maquette</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+  <body>
+    
+
+    <div class="header">
+      <div id="logo"></div>
+      <input type="checkbox" id="chk">
+      <label for="chk" class="show-menu-btn">
+        <i class="fas fa-ellipsis-h"></i>
+      </label>
+
+      <ul class="menu">
+        <a href="index.html">Accueil</a>
+        <a href="#section-1">Titre 1</a>
+        <a href="#">Nous contacter</a>
+        <a href="contacts.html">Vos contacts</a>
+        <label for="chk" class="hide-menu-btn">
+          <i class="fas fa-times"></i>
+        </label>
+        <input type="text" name="recherche" placeholder="Rechercher">
+        <button type="submit">
+          <i class="fa fa-search"></i>
+        </button>
+      </ul>
+    </div>
+
+    <div class="imgtemplate"></div>
+
+    <section id="section-1">
+      <h1>Titre h1</h1>
+      <div class="row">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus enim vel massa varius, non finibus lorem mattis. Nullam hendrerit auctor urna vel facilisis. Nulla porttitor porttitor dapibus. Sed vitae nisl vestibulum, sodales augue id, vehicula ipsum. Etiam a tellus sed purus vestibulum efficitur. Pellentesque in porta ex, feugiat egestas ante. Vivamus non quam velit. Sed turpis nulla, egestas et pulvinar vitae, lacinia sit amet arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus enim vel massa varius, non finibus lorem mattis. Nullam hendrerit auctor urna vel facilisis. Nulla porttitor porttitor dapibus. Sed vitae nisl vestibulum, sodales augue id, vehicula ipsum. Etiam a tellus sed purus vestibulum efficitur. Pellentesque in porta ex, feugiat egestas ante. Vivamus non quam velit. Sed turpis nulla, egestas et pulvinar vitae, lacinia sit amet arcu.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam maximus enim vel massa varius, non finibus lorem mattis. Nullam hendrerit auctor urna vel facilisis. Nulla porttitor porttitor dapibus. Sed vitae nisl vestibulum, sodales augue id, vehicula ipsum. Etiam a tellus sed purus vestibulum efficitur. Pellentesque in porta ex, feugiat egestas ante. Vivamus non quam velit. Sed turpis nulla, egestas et pulvinar vitae, lacinia sit amet arcu.</p>
+      </div>
+      <div class="row-spacing">
+            <div class="element">
+            <div class="icon icon1"></div>
+            <div class="description">
+              <h3><a href="#">Titre 1</a></h3>
+              <p>Description 1</p>
+            </div>
+        </div>
+
+          <div class="element">
+            <div class="icon icon2"></div>
+            <div class="description">
+              <h3><a href="#">Titre 2</a></h3>
+              <p>Description 2</p>
+            </div>
+  
+          </div>
+  
+
+          <div class="element">
+            <div class="icon icon3"></div>
+            <div class="description">
+              <h3><a href="#">Titre 3</a></h3>
+              <p>Description 3</p>
+            </div>
+          </div>
+
+          <div class="element">
+            <div class="icon icon4"></div>
+            <div class="description">
+              <h3><a href="#">Titre 4</a></h3>
+              <p>Description 4</p>
+            </div>
+          </div>
+
+      </div>
+    </section>
+
+    <section class="section-2">
+      <div class="left">
+        <h2>Titre h2</h2>
+        <div id="map"></div>
+          <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACbh73IpwnJQ74nnu_vry4S6uYc03k1lM">
+          </script>
+
+      </div>
+      <div class="right">
+        <h2>Titre h2</h2>
+        <form name="contact">
+        <p>
+          <input class="choix-ligne" type="text" name="prenom" placeholder="Prénom" required="required"/> 
+          <input class="choix-ligne" type="text" name="nom" placeholder="Nom" required="required"/> 
+        </p>
+        <p>
+          <input class="choix-ligne" type="text" name="naissance" placeholder="Date de naissance"required="required"/> 
+          <input class="choix-ligne" type="text" name="ville" placeholder="Ville de naissance" required="required"/> 
+        </p>
+        <p>
+          <input class="choix" type="email" name="mail" placeholder="Adresse email" required="required"/> 
+          
+          <input class="choix" type="file" accept="image/*" placeholder="Photo"/> 
+
+          <label for="textarea" ></label>
+          <textarea placeholder="Message"> </textarea>  
+
+          <input class="bouton" type="button" value="Envoyer" onClick="Envoyer(this.form)"/>
+        </p>
+        </form>
+        <div class="res-form">
+          <div id="personnePrenom"></div>
+          <div id="personneNom"></div>
+          <div id="personneNaissance"></div>
+          <div id="personneVille"></div>
+          <div id="personneMail"></div>
+          <div id="champsRequis"></div>
+        </div>
+
+      </div>
+    </section>
+    <section>
+      <div class="row">
+        <div id="network"></div>
+        <div id="info"></div>
+      </div>      
+    </section>
+
+    <div id="contacts"></div>
+  <footer>
+    <p>Adrien Cerrone TPA</p>
+    <p>
+      <a href="tel:5825412541241"><i class="fas fa-phone"></i></a>
+    </p>
+  </footer>
+    
+  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript" src="js/cordovaPlugin.js"></script>
+
+  </body>
+</html>
