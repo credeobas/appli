@@ -259,6 +259,10 @@ ul#contacts li a span:nth-child(1) .fas{
 .fa-minus-circle, .fa-plus-circle{
 	font-size: 1.8rem;
 }
+.contactList{
+	display: block;
+}
+
 
 
 #ball

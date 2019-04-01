@@ -7,13 +7,13 @@ function contact() {
             var contactName = contacts[i].displayName;            
             var phone = contacts[i].phoneNumbers[j];
             var res = res +
-               "<li>\
-                  <a href=\"tel:"+phone.number+"\">\
+               "<a href=\"contact_detail.html\">\
+               <li class=\"contactList\">\
                      <i class=\"fas fa-minus-circle\"></i>\
-                     <i class=\"fas fa-phone\"></i>\
-                     <span>"+contactName+" "+phone.number+"</span>\
-                  </a>\
-               </li>";
+                     <a href=\"tel:"+phone.number+"\"><i class=\"fas fa-phone\"></i>\
+                     <span>"+contactName+" "+phone.number+"</span></a>\
+               </li>\
+               </a>";
             //phone.type + phone.normalizedNumber
          }
       }
